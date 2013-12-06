@@ -8,14 +8,14 @@ EXEC_FILES=git-wip
 # TODO: install emacs and vim plugin
 
 all:
-        @echo "usage: make install"
-        @echo " make uninstall"
+	@echo "usage: make install"
+	@echo " make uninstall"
 
 install:
-        install -d -m 0755 $(prefix)/bin
-        install -m 0755 $(EXEC_FILES) $(prefix)/bin
+	install -d -m 0755 $(prefix)/bin
+	install -m 0755 $(EXEC_FILES) $(prefix)/bin
 
 uninstall:
-        test -d $(prefix)/bin && \
-        cd $(prefix)/bin && \
-        rm -f $(EXEC_FILES)
+	test -d $(prefix)/bin && \
+	cd $(prefix)/bin && \
+	rm -f $(EXEC_FILES)
